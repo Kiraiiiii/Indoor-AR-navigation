@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select Destination</title>
+    <script type="text/javascript">
+        function showmap()
+        {
+            place = document.getElementById("place").value;
+            if(place == "A")
+            {
+                document.getElementById("audit").style.display='block'
+                
+            }
+            else if(place == "B")
+            {
+                document.getElementById("off").style.display='block'
+            }
+            else
+            {
+                document.getElementById("audit").style.display='none'
+                document.getElementById("off").style.display='none'
+            }
+        }
+    </script>
+</head>
+<body>
+
+<table align="center" width="50%" cellpadding="8" cellspacing="8">
+    <tr>
+        <td>
+            <img src="/Static/audit.jpg" id="audit" width="600" height="300">
+            <img src="/Static/office.jpg" id="off" width="600" height="300">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form action="./index1.html" method="post"></form>
+            <select id="place" onchange="showmap()" style="width: 90%; ">
+                <option value="A">Auditorium</option>
+                <option>Canteen</option>
+                <option>Boy's Hostel</option>
+                <option value="B">Administrative Office</option>
+                <option>CSE HOD</option>
+                <option>Gents Bathroom</option>
+                <option>Girls Bathroom</option>
+            </select>
+        </td>
+    </tr>
+    <input type="submit" value="Submit">
+   </form>
+</table>
+
+</body>
+</html>
